@@ -1,4 +1,4 @@
-package com.example.APIModels;
+package com.example.APITest.APIModels;
 
 public class Sia 
 {

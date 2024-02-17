@@ -1,8 +1,8 @@
-package com.example;
+package com.example.APITest;
 
-import com.example.APIModels.Miner;
-import com.example.APIModels.Sia;
-import com.example.APIModels.SiaPriceRoot;
+import com.example.APITest.APIModels.Miner;
+import com.example.APITest.APIModels.Sia;
+import com.example.APITest.APIModels.SiaPriceRoot;
 
 public class getData {
     public static Double getOverallHashrate(Miner dataList)

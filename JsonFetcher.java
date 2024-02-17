@@ -1,4 +1,4 @@
-package com.example;
+package com.example.APITest;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,6 +6,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class JsonFetcher {
+    @SuppressWarnings("deprecation")
     public static String getJsonFromUrl(String urlString) {
         StringBuilder result = new StringBuilder();
         try {
