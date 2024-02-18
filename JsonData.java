@@ -1,39 +1,63 @@
 package com.example.APITest;
 
-public class JsonData
-{
-    private String message;
-    private String unixTime;
-    
-    public JsonData(String message)
-    {
-        this.message=message;
-        setUnixTime();
+public class JsonData {
+    private String lastUpdateTime;
+    private String nextUpdateTime;
+    private Double revenue;
+    private Double cost;
+    private Double profit;
+
+    public JsonData() {
+
     }
 
-    public String getMessage()
-    {
-        return message;
-    }
-    public void setMessage(String message)
-    {
-        this.message=message;
+    public String getLastUpdateTime() {
+        return lastUpdateTime;
     }
 
-    public String getUnixTime()
-    {
-        return unixTime;
-    }
-    public void setUnixTime()
-    {
-        unixTime=getUnixString();
+    public void setLastUpdateTime() {
+        lastUpdateTime = getCurrentUnix();
     }
 
+    public String getNextUpdateTime() {
+        return nextUpdateTime;
+    }
 
+    public void setNextUpdateTime() {
+        nextUpdateTime = getNextUnix();
+    }
 
-    public static String getUnixString()
-    {
+    public Double getRevenue() {
+        return revenue;
+    }
+
+    public void setRevenue(Double revenue) {
+        this.revenue = revenue;
+    }
+
+    public Double getCost() {
+        return cost;
+    }
+
+    public void setCost(Double cost) {
+        this.cost = cost;
+    }
+
+    public Double getProfit() {
+        return profit;
+    }
+
+    public void setProfit(Double profit) {
+        this.profit = profit;
+    }
+
+    public static String getCurrentUnix() {
         String ut2 = Long.toString(System.currentTimeMillis() / 1000L);
+        return ut2;
+    }
+
+    public static String getNextUnix() {
+        String ut2 = Long.toString((System.currentTimeMillis() / 1000L) + 120); // for updates every 2 minutes
         return ut2;
     }
 }

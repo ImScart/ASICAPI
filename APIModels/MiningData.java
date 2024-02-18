@@ -1,5 +1,6 @@
 package com.example.APITest.APIModels;
-public class MiningData{
+
+public class MiningData {
     public int valid;
     public double av_hashrate;
     public int rejected;
